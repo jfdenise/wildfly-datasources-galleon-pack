@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="postgresql-datasource">
+    <props>
+        <prop name="extends" value="postgresql-driver"/>
+    </props>
     <dependencies>
         <layer name="postgresql-driver"/>
     </dependencies>
