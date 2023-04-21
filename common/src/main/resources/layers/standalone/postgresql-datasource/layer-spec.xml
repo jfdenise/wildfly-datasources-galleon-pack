@@ -1,7 +1,8 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="postgresql-datasource">
     <props>
-        <prop name="extends" value="postgresql-driver"/>
+        <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/jta-data-source,java:jboss/datasources/PostgreSQLDS"/>
+        <prop name="member-of" value="datasources"/>
     </props>
     <dependencies>
         <layer name="postgresql-driver"/>

@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="postgresql-driver">
     <props>
+        <prop name="member-of" value="datasources"/>
         <prop name="pattern-xml-path" value="/WEB-INF/.*.xml,/datasources/datasource/driver,postgresql"/>
         <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/properties/property[@name='hibernate.dialect']/@value,org.hibernate.dialect.PostgreSQL.*"/>
     </props>
