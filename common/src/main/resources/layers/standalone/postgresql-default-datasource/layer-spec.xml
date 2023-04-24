@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="postgresql-default-datasource">
+    <props>
+        <prop name="default-member-of" value="datasources"/>
+        <prop name="profile-postgresql" value="h2-default-datasource"/>
+    </props>
     <dependencies>
         <layer name="postgresql-datasource"/>
     </dependencies>

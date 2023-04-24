@@ -3,6 +3,7 @@
     <props>
         <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/jta-data-source,java:jboss/datasources/PostgreSQLDS"/>
         <prop name="member-of" value="datasources"/>
+        <prop name="profile" value="postgresql"/>
     </props>
     <dependencies>
         <layer name="postgresql-driver"/>
