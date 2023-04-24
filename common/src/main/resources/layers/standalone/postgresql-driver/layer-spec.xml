@@ -3,6 +3,7 @@
     <props>
         <prop name="member-of" value="datasources"/>
         <prop name="pattern-xml-path" value="/WEB-INF/.*.xml,/datasources/datasource/driver,postgresql"/>
+        <prop name="pattern-xml-path-xa" value="/WEB-INF/.*.xml,/datasources/xa-datasource/driver,postgresql"/>
         <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/properties/property[@name='hibernate.dialect']/@value,org.hibernate.dialect.PostgreSQL.*"/>
     </props>
     <feature spec="subsystem.datasources">
