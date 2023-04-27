@@ -1,9 +1,15 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="mysql-datasource">
     <props>
-        <prop name="extends" value="mysql-driver"/>
+        <prop name="add-on" value="datasource:mysql"/>
+        <prop name="add-on-description" value="To configure the mysql datasource, check the documentation in https://github.com/wildfly-extras/wildfly-datasources-galleon-pack/blob/main/doc/mysql/README.md"/>
+        <prop name="add-on-fix-unbound-datasources" value="Required env variables,MYSQL_JNDI=##ITEM## MYSQL_DATABASE=&lt;database name&gt; MYSQL_USER=&lt;user&gt; MYSQL_PASSWORD=&lt;password&gt;"/>
+        <prop name="add-on-depends-on" value="only:datasources"/>
+        <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/jta-data-source,java:jboss/datasources/MySQLDS"/>
+
     </props>
     <dependencies>
+        <layer name="datasources"/>
         <layer name="mysql-driver"/>
     </dependencies>
     
