@@ -3,7 +3,6 @@
     <props>
         <prop name="add-on" value="database,mysql:default"/>
         <prop name="add-on-fix-no-default-datasource" value="Required env variables, MYSQL_DATABASE=&lt;database name&gt; MYSQL_USER=&lt;user&gt; MYSQL_PASSWORD=&lt;password&gt;"/>
-        <prop name="bring-datasource" value="###DEFAULT_DS###"/>
         <prop name="add-on-depends-on" value="only:datasources"/>
     </props>
     <dependencies>
