@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="oracle-default-datasource">
-    <props>
-        <prop name="extends" value="oracle-driver"/>
-    </props>
     <dependencies>
         <layer name="oracle-datasource"/>
     </dependencies>

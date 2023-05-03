@@ -1,9 +1,5 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="mssqlserver-driver">
-    <props>
-        <prop name="pattern-xml-path" value="/WEB-INF/.*.xml,/datasources/datasource/driver,mssqlserver"/>
-        <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/properties/property[@name='hibernate.dialect']/@value,org.hibernate.dialect.SQLServer.*"/>
-    </props>
     <feature spec="subsystem.datasources">
         <feature spec="subsystem.datasources.jdbc-driver">
             <param name="driver-name" value="mssqlserver"/>
