@@ -1,8 +1,5 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="h2database-datasource">
-    <props>
-        <prop name="extends" value="h2database-driver"/>
-    </props>
     <dependencies>
         <layer name="h2database-driver"/>
     </dependencies>
