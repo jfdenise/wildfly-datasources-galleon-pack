@@ -2,7 +2,7 @@
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="postgresql-default-datasource">
     <props>
         <prop name="add-on" value="database,postgresql:default"/>
-        <prop name="add-on-description" value="To configure the postgresql datasource, check the documentation in https://github.com/wildfly-extras/wildfly-datasources-galleon-pack/blob/main/doc/postgresql/README.md"/>
+        <prop name="add-on-description" value="Documentation in https://github.com/wildfly-extras/wildfly-datasources-galleon-pack"/>
         <prop name="add-on-fix-no-default-datasource" value="Required env variables,POSTGRESQL_DATABASE=&lt;database name&gt; POSTGRESQL_USER=&lt;user&gt; POSTGRESQL_PASSWORD=&lt;password&gt;"/>
         <prop name="add-on-depends-on" value="only:datasources"/>
     </props>
