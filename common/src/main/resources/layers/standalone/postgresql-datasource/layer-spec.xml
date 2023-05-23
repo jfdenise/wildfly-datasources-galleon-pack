@@ -4,7 +4,7 @@
         <prop name="configuration" value="https://raw.githubusercontent.com/jfdenise/wildfly-datasources-galleon-pack/layers_metadata/doc/postgresql/env.yaml"/>
         <prop name="add-on" value="database,postgresql"/>
         <prop name="add-on-description" value="Documentation in https://github.com/wildfly-extras/wildfly-datasources-galleon-pack"/>
-        <prop name="add-on-fix-unbound-datasources" value="POSTGRESQL_JNDI=##ITEM##"/>
+        <prop name="add-on-fix-unbound-datasources" value="JNDI env,POSTGRESQL_JNDI=##ITEM##"/>
         <prop name="add-on-depends-on" value="only:datasources"/>
         <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/jta-data-source,java:jboss/datasources/PostgreSQLDS"/>
     </props>
