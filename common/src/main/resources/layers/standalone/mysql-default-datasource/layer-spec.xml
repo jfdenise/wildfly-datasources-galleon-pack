@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="mysql-default-datasource">
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:2.0" name="mysql-default-datasource">
     <props>
         <prop name="add-on" value="database,mysql:default"/>
         <prop name="add-on-fix-no-default-datasource" value="Required env variables, MYSQL_DATABASE=&lt;database name&gt; MYSQL_USER=&lt;user&gt; MYSQL_PASSWORD=&lt;password&gt;"/>
