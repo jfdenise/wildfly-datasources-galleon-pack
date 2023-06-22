@@ -1,6 +1,15 @@
 <?xml version="1.0" ?>
-<layer-spec xmlns="urn:jboss:galleon:layer-spec:1.0" name="oracle-datasource">
+<layer-spec xmlns="urn:jboss:galleon:layer-spec:2.0" name="oracle-datasource">
+    <props>
+        <prop name="configuration" value="https://raw.githubusercontent.com/jfdenise/wildfly-datasources-galleon-pack/layers_metadata/doc/oracle/env.yaml"/>
+        <prop name="add-on" value="database,oracle"/>
+        <prop name="add-on-description" value="Documentation in https://github.com/wildfly-extras/wildfly-datasources-galleon-pack"/>
+        <prop name="add-on-fix-unbound-datasources" value="JNDI env,ORACLE_JNDI=##ITEM##"/>
+        <prop name="add-on-depends-on" value="only:datasources"/>
+        <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/jta-data-source,java:jboss/datasources/OracleDS"/>
+    </props>
     <dependencies>
+        <layer name="datasources"/>
         <layer name="oracle-driver"/>
     </dependencies>
 

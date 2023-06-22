@@ -2,8 +2,11 @@
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:2.0" name="mysql-driver">
     <props>
         <prop name="pattern-xml-path" value="/WEB-INF/.*.xml,/datasources/datasource/driver,mysql"/>
-        <prop name="xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/properties/property[@name='hibernate.dialect']/@value,org.hibernate.dialect.MySQL.*"/>
+        <prop name="pattern-xml-path-xa" value="/WEB-INF/.*.xml,/datasources/xa-datasource/driver,mysql"/>
     </props>
+    <dependencies>
+        <layer name="datasources"/>
+    </dependencies>
     <feature spec="subsystem.datasources">
         <feature spec="subsystem.datasources.jdbc-driver">
             <param name="driver-name" value="mysql"/>
