@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <layer-spec xmlns="urn:jboss:galleon:layer-spec:2.0" name="mssqlserver-driver">
     <props>
-        <prop name="org.wildfly.rule.pattern-xml-path" value="/WEB-INF/.*.xml,/datasources/datasource/driver,mssqlserver"/>
-        <prop name="org.wildfly.rule.pattern-xml-path-xa" value="/WEB-INF/.*.xml,/datasources/xa-datasource/driver,mssqlserver"/>
+        <prop name="org.wildfly.rule.pattern-xml-path" value="/WEB-INF/*.xml,/datasources/datasource/driver,mssqlserver"/>
+        <prop name="org.wildfly.rule.pattern-xml-path-xa" value="/WEB-INF/*.xml,/datasources/xa-datasource/driver,mssqlserver"/>
     </props>
     <dependencies>
         <layer name="datasources"/>
