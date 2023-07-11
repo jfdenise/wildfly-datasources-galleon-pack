@@ -6,7 +6,7 @@
         <prop name="org.wildfly.rule.add-on-description" value="Documentation in https://github.com/wildfly-extras/wildfly-datasources-galleon-pack"/>
         <prop name="org.wildfly.rule.add-on-fix-unbound-datasources" value="JNDI env,ORACLE_JNDI=##ITEM##"/>
         <prop name="org.wildfly.rule.add-on-depends-on" value="only:datasources"/>
-        <prop name="org.wildfly.rule.xml-path" value="/WEB-INF/classes/META-INF/persistence.xml,/persistence/persistence-unit/jta-data-source,java:jboss/datasources/OracleDS"/>
+        <prop name="org.wildfly.rule.xml-path" value="[/META-INF/persistence.xml,/WEB-INF/classes/META-INF/persistence.xml],/persistence/persistence-unit/jta-data-source,java:jboss/datasources/OracleDS"/>
     </props>
     <dependencies>
         <layer name="datasources"/>
